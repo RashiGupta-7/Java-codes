@@ -1,0 +1,43 @@
+//1st approach
+
+package com;
+
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter two numbers for swapping:");
+        int a = input.nextInt();
+        int b = input.nextInt();
+        //Method 1
+        int temp;
+        temp = a + b;
+        b = temp - b;
+        a = temp - a;
+        System.out.print("After swapping 1st number is: " + a);
+        System.out.println ("and second number is: " + b);
+     }
+}   
+
+//------------------------------------------------------------------------
+//2nd approach
+
+package com;
+
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter two numbers for swapping:");
+        int a = input.nextInt();
+        int b = input.nextInt();
+        //Method 2
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        System.out.println("After swapping 1st number is: " + a);
+        System.out.println("and second number is: " + b);
+    }
+}
