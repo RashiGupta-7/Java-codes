@@ -1,0 +1,47 @@
+//1st approach
+
+package com;
+
+import java.util.Scanner;
+
+public class rashi {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter any three numbers: ");
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+        if(a>b && a>c)
+            System.out.println("Largest is "+a);
+        if(b>a && b>c)
+            System.out.println("Largest is "+b);
+        else
+            System.out.println("Largest is "+c);
+        }
+    }
+    
+    
+    //---------------------------------------------------------
+    //2nd approach
+    
+package com;
+
+import java.util.Scanner;
+
+public class rashi {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter any three numbers: ");
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+        int max =a;
+        if(b>max)
+            max = b;
+        if(c>max)
+            max = c;
+        else
+            max = a;
+        System.out.println("Largest is "+max);
+        }
+    }
