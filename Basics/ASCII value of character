@@ -1,0 +1,13 @@
+package com;
+
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a character: ");
+        char a = input.next().charAt(0);
+        int ascii = a;
+        System.out.println("The ASCII value of" + a +" is: " + ascii);
+    }
+}
