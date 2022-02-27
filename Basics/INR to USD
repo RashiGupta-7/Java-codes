@@ -1,0 +1,13 @@
+package com;
+
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Currency in Rupees: ");
+        double rs = scan.nextDouble();
+        double usd = rs * 0.013; //conversion
+        System.out.println(usd + "$");
+    }
+}
