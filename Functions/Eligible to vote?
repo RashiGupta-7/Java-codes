@@ -1,0 +1,25 @@
+package com;
+
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the age to check eligibility to vote: ");
+        int n = scan.nextInt();
+        System.out.printf("%s",vote(n));
+    }
+    public static String vote(int age){
+        if (age > 0) { //check if age is positive 
+            if (age < 18) {
+                System.out.println("Sorry, you are not eligible to vote."); // age less than 18
+            } else {
+                System.out.println("You are eligible to vote."); // age greater than 18
+            }
+        }
+        else{ 
+            System.out.println("Please enter valid age."); //when age is negative
+        }
+        return "";
+    }
+}
