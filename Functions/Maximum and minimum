@@ -1,0 +1,37 @@
+package com;
+
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter 3 numbers: ");
+        int num1 = scan.nextInt();
+        int num2 = scan.nextInt();
+        int num3 = scan.nextInt();
+        System.out.println("Maximum among three: " + max(num1, num2, num3));
+        System.out.println("Minimum among three: " + min(num1, num2, num3));
+    }
+    // Function for maximum among three
+    public static int max(int a, int b , int c){
+        int maximum = a;
+        if (b > maximum) {
+            maximum = b; // if b is greater than a
+        }
+        if (c > maximum) {
+            maximum = c; // if c is greater than maximum
+        }
+        return maximum; // return a
+    }
+    // Function for minimum among three
+    public static int min(int a, int b, int c){
+        int minimum = a;
+        if (b < minimum) {
+            minimum = b; // if b is smaller than a
+        }
+        if (c < minimum) {
+            minimum = c; // if b is smaller than minimum
+        }
+        return minimum; // return a
+    }
+}
