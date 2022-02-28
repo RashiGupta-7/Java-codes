@@ -1,0 +1,21 @@
+package com;
+
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int n = scan.nextInt(); //input number from user
+        
+        if(n<0){
+            System.out.println("The number " + n + " is negative.");
+            //numbers less than 0 are always negative
+        }
+        
+        else{
+            System.out.println("The number " + n + " is positive.");
+            //if number is not less than 0 then it must be positive
+        }
+    }
+}
