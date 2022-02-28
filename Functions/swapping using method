@@ -1,0 +1,23 @@
+package com;
+
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter 2 numbers: ");
+        int num1 = input.nextInt(); // number 1
+        int num2 = input.nextInt(); // number 2
+        int swap = swap(num1 , num2); //calling function swap(a,b)
+    }
+    // declaring a function for swapping of 2 numbers
+    static int swap(int a, int b){
+        int temp;
+        temp = a;
+        a = b;
+        b = temp;
+        System.out.println(a);
+        System.out.println(b);
+        return 0;
+    }
+}
