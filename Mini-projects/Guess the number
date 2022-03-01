@@ -1,0 +1,31 @@
+package com;
+
+import java.util.Scanner;
+
+public class practice {
+    public static void main(String[] args) {
+        System.out.println("Let's play!");
+        System.out.println("If you want to exit enter 0 or less than 0");
+        Scanner in = new Scanner(System.in);
+        int num = (int)(Math.random()*100); // random numbers 
+        int a = 0;
+        do {
+            System.out.print("Guess the number(1-100) : ");
+            a = in.nextInt();
+            if (a > num){
+                System.out.println("Your number is too large");
+            }
+            if (a < num){
+                System.out.println("Your number is too small");
+            }
+            if (a == num){
+                System.out.println("Yeahhhh!! correct number!");
+                break;
+            }
+        }
+        while (a >= 0); // for exiting the game
+        {
+            System.out.println("The number was: " + num);
+        }
+    }
+}
