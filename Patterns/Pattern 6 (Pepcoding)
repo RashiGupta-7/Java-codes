@@ -1,0 +1,31 @@
+package com;
+
+import java.util.Scanner;
+
+class Solution {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int star=n/2 + 1, space=1;
+        for (int i = 1; i <= n; i++) {
+                for (int k = 1; k <= star ; k++) {
+                    System.out.print("*\t");
+                }
+                for (int k = 1; k <= space ; k++) {
+                    System.out.print("\t");
+                }
+                for (int k = 1; k <= star ; k++) {
+                    System.out.print("*\t");
+                }
+            if (i<=n/2){
+                star--;
+                space = space + 2;
+            }
+            else{
+                star++;
+                space = space - 2;
+            }
+            System.out.println();
+        }
+    }
+}
