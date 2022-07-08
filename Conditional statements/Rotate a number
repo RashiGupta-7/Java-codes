@@ -1,0 +1,49 @@
+import java.util.*;
+   
+   public class Main{
+   
+   public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     int n = sc.nextInt();
+     int k = sc.nextInt();
+     
+     int digit = 1;
+     int temp = n;
+     while ( temp > 10 ) {
+       temp = temp / 10;
+       digit++;
+     }
+
+    
+     if(k > digit){
+          k = k % digit;
+     }
+
+     if(k < -digit){
+        k = k % (-digit);
+    }
+
+
+     if(k > 0){
+       int div = (int)Math.pow(10, k);
+       int quotient = (int)(n/div);
+       int rem = (int)(n%div);
+       int a = (int)Math.pow(10, digit-k);
+       int result = (rem*a) + quotient;
+       System.out.println(result);
+    }
+    
+    if(k == 0){
+      System.out.println(n);
+    }
+    
+    if(k < 0){
+      int div = (int)Math.pow(10, digit+k);
+      int quotient = (int)(n/div);
+      int rem = (int)(n%div);
+      int a = (int)Math.pow(10, -k);
+      int result = (rem*a) + quotient;
+      System.out.println(result);
+    }
+   }
+  }
