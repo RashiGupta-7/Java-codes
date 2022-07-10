@@ -1,0 +1,26 @@
+import java.util.*;
+  
+  public class Main {
+  
+  	  public static void main(String[] args) {
+  	  	//   Write your code here
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+
+		int a2 = (int)Math.pow(a,2);
+		int b2 = (int)Math.pow(b,2);
+		int c2 = (int)Math.pow(c,2);
+
+		int max_side = Math.max(a2, Math.max(b2, c2));
+
+		if((max_side == a2 && (b2 + c2)==a2) || (max_side == b2 && (a2 + c2)==b2) || (max_side == c2 && (a2 + b2)==c2)){
+			System.out.println("true");
+		}
+
+		else{
+			System.out.println("false");
+		}
+  	}
+}
