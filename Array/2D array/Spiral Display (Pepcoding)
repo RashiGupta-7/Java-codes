@@ -1,0 +1,59 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int arr[][] = new int[n][m];
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < m; j++){
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        spiraldisplay(arr);
+    }
+
+    public static void spiraldisplay(int arr[][]) {
+        int minr = 0;
+        int minc = 0;
+        int maxr = arr.length - 1;
+        int maxc = arr[0].length - 1;
+        int total_elements = arr.length * arr[0].length;
+        int count = 0;
+
+        while(count < total_elements){
+        //left wall
+        for(int i = minr, j = minc; i <= maxr && count < total_elements; i++){
+            System.out.println(arr[i][j]);
+            count++;
+        }
+        minc++;
+
+        //bottom wall
+        for(int i = maxr, j = minc; j <= maxc && count < total_elements; j++){
+            System.out.println(arr[i][j]);
+            count++;
+        }
+        maxr--;
+
+        //right wall
+        for(int i = maxr, j = maxc; i >= minr && count < total_elements; i--){
+            System.out.println(arr[i][j]);
+            count++;
+        }
+        maxc--;
+
+        //top wall
+        for(int i = minr, j = maxc; j>= minc && count < total_elements; j--){
+            System.out.println(arr[i][j]);
+            count++;
+        }
+        minr++;
+        }
+    }
+}
